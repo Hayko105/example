@@ -1,0 +1,262 @@
+.support-block {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+
+    padding: 44px 19px 55px;
+    text-align: center;
+
+    &_about-us {
+        margin-top: 43px;
+
+        .btn {
+            &:before {
+                background-color: #f9f9ff;
+            }
+        }
+    }
+
+    &_in-partnership {
+        margin-top: 30px;
+        padding: 0;
+
+        .support-block {
+            &__img {
+                @include wh(86px, 86px);
+            }
+
+            &-info {
+                &__title {
+                    margin: 37px 0 12px;
+                }
+
+                &__desc {
+                    p {
+                        font-size: $l;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            &-additional {
+                margin-top: 60px;
+                text-align: center;
+
+                &__email,
+                &__phone {
+                    p, a {
+                        font-size: $l;
+                        line-height: 1.5;
+                        color: $col-blue;
+                        font-weight: bold;
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &_background {
+        background: url("#{$path-img}/bg-imgs/support-block/support-bg-mobile.png")
+            top center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__img {
+        @include wh(79px, 79px);
+
+        img {
+            @include wh(100%, 100%);
+        }
+    }
+
+    &-info {
+        &__title {
+            margin: 17px 0;
+
+            h2 {
+                font-size: $xxxl;
+            }
+        }
+
+        &__desc {
+            p {
+                line-height: 1.5;
+            }
+        }
+
+        &__link {
+            margin-top: 17px;
+
+            .btn {
+                min-width: 275px;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .support-block {
+        padding: 36px 29px 45px;
+        text-align: left;
+
+        &_about-us {
+            margin-top: 129px;
+        }
+
+        &_in-partnership {
+            margin-top: 59px;
+            padding: 0;
+            @include align-items(flex-start);
+
+            .support-block {
+                &__img {
+                    @include wh(175px, 175px);
+                }
+
+                &-info {
+                    margin-left: 19px;
+
+                    &__title {
+                        margin: 0 0 12px;
+                    }
+
+                    &__desc {
+                        p {
+                            font-size: $xxl;
+                        }
+                    }
+                }
+
+                &-additional {
+                    margin-top: 10px;
+                    @include flex-display();
+                    @include align-items(flex-start);
+                    text-align: left;
+
+                    &__img {
+                        @include wh(32px, 27px);
+                        margin: 12px 28px 0 0;
+
+                        img {
+                            @include wh(100%, 100%);
+                        }
+                    }
+
+                    &__email,
+                    &__phone {
+                        p {
+                            font-size: $xxl;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/support-block/support-bg-tablet.png")
+                top center no-repeat;
+        }
+
+        &__img {
+            @include wh(175px, 175px);
+        }
+
+        &-info {
+            margin-left: 23px;
+            width: 448px;
+
+            &__title {
+                margin: 11px 0;
+
+                h2 {
+                    font-size: $xxxxl;
+                }
+            }
+
+            &__link {
+                margin-top: 24px;
+
+                .btn {
+                    min-width: 291px;
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .support-block {
+        padding: 113px 0 102px;
+
+        &_about-us {
+            margin-top: 136px;
+        }
+
+        &_in-partnership {
+            margin-top: 93px;
+            padding: 0;
+
+            .support-block {
+                &__img {
+                    @include wh(211px, 211px);
+                }
+
+                &-info {
+                    margin-left: 65px;
+                    max-width: 624px;
+
+                    &__title {
+                        margin: 0 0 14px;
+                    }
+                }
+
+                &-additional {
+                    margin-top: 18px;
+                }
+            }
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/support-block/support-bg-desktop.png")
+                top center no-repeat;
+        }
+
+        &-info {
+            margin-left: 49px;
+            width: 742px;
+
+            &__title {
+                margin: 0 0 5px 0;
+
+                h2 {
+                    font-size: $xxxxxl;
+                }
+            }
+
+            &__link {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+
+// // // // // DESKTOP SIZES // // // // //
+
+@include desktop {
+    .support-block {
+        &_about-us {
+            margin: 136px 0 0;
+        }
+    }
+}

@@ -1,0 +1,149 @@
+.footer {
+    
+    &__nav {
+        background: url("#{$path-img}/bg-imgs/footer-bg-mobile.png") left top
+            no-repeat;
+        background-size: cover;
+        padding-top: 42px;
+    }
+
+    &__list {
+        margin-bottom: 42px;
+        width: 100%;
+
+        li {
+            margin-top: 12px;
+        }
+
+        &__head {
+            color: $col-light-blue;
+            font-size: $xxl;
+            @include bold();
+            border-bottom: 2px solid #9e9eff;
+            margin-bottom: -4px;
+            display: initial;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        @include bold();
+        color: $col-white;
+        
+        &:hover {
+            color: $col-light-blue2;
+        }
+    }
+
+    &__bottom {
+        background-color: $col-dark-gray;
+        padding: 54px 0 24px;
+        position: relative;
+    }
+
+    &__copy {
+        color: $col-white;
+        font-size: $small;
+        @include bold();
+        margin: 0;
+    }
+
+    &__social {
+        position: absolute;
+        right: 36px;
+        top: -24px;
+
+        &__link {
+            margin: 0 4px;
+        }
+    }
+}
+
+/*** Tablet ***/
+@include tablet {
+    .footer {
+        &__nav {
+            padding: 50px 0 60px;
+            background: url("#{$path-img}/bg-imgs/footer-bg-desktop.png") left
+                top no-repeat;
+            background-size: cover;
+        }
+
+        &__list {
+            margin: 0;
+            width: 24%;
+            @include flex-basis(24%);
+            @include flex-grow(0);
+            @include flex-shrink(0);
+
+            li {
+                margin-top: 14px;
+            }
+
+            &__head {
+                display: inline-block;
+                margin-bottom: 12px;
+                padding-bottom: 10px;
+                border-width: 1px;
+                min-width: 115px;
+                line-height: 1;
+
+                br {
+                    display: block;
+                    line-height: 0;
+                }
+            }
+        }
+
+        &__bottom {
+            padding: 22px 0;
+        }
+
+        &__social {
+            right: 18px;
+        }
+    }
+}
+
+/*** Laptop ***/
+@include laptop {
+    .footer {
+
+        &__nav{
+            padding: 92px 0 64px;
+        }
+
+        &__list {
+            width: 20%;
+            @include flex-basis(20%);
+            @include flex-grow(0);
+            @include flex-shrink(0);
+
+            &__head {
+                br,
+                .no-tablet {
+                    display: none;
+                }
+            }
+        }
+
+        &__social {
+            position: inherit;
+            top: inherit;
+            right: inherit;
+            margin: -45px 0 0 auto;
+        }
+    }
+}
+
+/*** Desktop ***/
+@include desktop {
+    .footer {
+        &__social {
+            margin-right: -15px;
+        }
+    }
+}

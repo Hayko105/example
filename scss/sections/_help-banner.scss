@@ -1,0 +1,250 @@
+.help-banner {
+    padding: 46px 0 49px;
+
+    &_background {
+        background-image: url("#{$path-img}/bg-imgs/help-banner/yellow-bg-mobile.png");
+        background-size: 100% 100%;
+    }
+
+    &__title {
+        h2 {
+            font-size: $xxxl;
+            color: #3839a8;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 15px;
+        max-width: 290px;
+
+        p {
+            line-height: 1.5;
+            font-weight: bold;
+            font-size: $l;
+            color: $col-blue;
+            margin-bottom: 0;
+        }
+        
+        a {
+            color: $col-blue;
+            text-decoration: underline;
+            
+            &:hover {
+                //text-decoration: none;
+            }
+        }
+    }
+
+    &-blocks {
+        margin-top: 25px;
+    }
+
+    &__block {
+        @include flex-display();
+        @include flex-direction(row);
+        @include align-items(center);
+        margin-bottom: 11px;
+        background-color: $col-white;
+        padding: 11px 13px;
+        @include radius(9px);
+        @include shadow(0 2px 4px 0 rgba(0, 0, 0, 0.21));
+
+        &-img {
+            @include flex-display();
+            @include align-items(center);
+            @include justify-content(center);
+            @include wh(40px, 40px);
+            margin-right: 13px;
+
+            span {
+                display: block;
+            }
+        }
+
+        br {
+            display: none;
+        }
+
+        a {
+            font-family: $muliFont;
+            font-size: $l;
+            font-weight: bold;
+            line-height: normal;
+            color: $col-blue;
+            text-decoration: underline;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        padding: 28px 0 30px;
+        border-bottom: 1px solid $col-light-blue2;
+
+        P {
+            line-height: 1.5;
+            max-width: 300px;
+            font-size: $l;
+            font-weight: bold;
+            color: $col-blue;
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: underline;
+            color: $col-blue;
+        }
+    }
+
+    &_in-help-page {
+        margin-top: 10px;
+    }
+
+    &_in-contact-page {
+        margin-top: 9px;
+
+        &.help-banner_background {
+            background-image: none;
+            background-color: $col-light-orang;
+        }
+
+        .help-banner {
+            padding: 49px 0 25px;
+
+            &__subtitle {
+                max-width: 270px;
+
+                p {
+                    color: $col-black;
+                }
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .help-banner {
+        padding: 53px 18px 75px;
+        max-width: 659px;
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/help-banner/yellow-bg-tablet.png");
+        }
+
+        &__title {
+            h2 {
+                font-size: $xxxxxl;
+            }
+        }
+
+        &__subtitle {
+            max-width: none;
+            margin-top: 18px;
+
+            p {
+                font-size: $xxl;
+            }
+        }
+
+        &-blocks {
+            @include flex-display();
+            margin-top: 31px;
+        }
+
+        &__block {
+            width: 145px;
+            text-align: center;
+            margin: 0 17px 0 0;
+            padding: 16px 10px 12px;
+            @include flex-direction(column);
+
+            br {
+                display: block;
+            }
+
+            &-img {
+                @include wh(78px, 73px);
+                margin: 0 0 8px 0;
+
+                .icon-study-green {
+                    background: url(#{$path-icon}icon-study-green-big.svg)
+                        center / auto no-repeat;
+                }
+
+                .icon-help-green {
+                    background: url(#{$path-icon}icon-help-green-big.svg) center /
+                        auto no-repeat;
+                }
+
+                .icon-community-green {
+                    background: url(#{$path-icon}icon-community-green-big.svg)
+                        center / auto no-repeat;
+                }
+
+                .icon-university-green {
+                    background: url(#{$path-icon}icon-university-green-big.svg)
+                        center / auto no-repeat;
+                }
+
+                span {
+                    @include wh(100%, 100%);
+                }
+            }
+        }
+
+        &__link {
+            padding: 60px 0;
+
+            P {
+                max-width: 556px;
+                font-size: $xxl;
+            }
+        }
+
+        &_in-contact-page {
+            .help-banner {
+                padding: 55px 12px 50px;
+
+                &__subtitle {
+                    max-width: 713px;
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .help-banner {
+        padding: 76px 0 85px;
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/help-banner/yellow-bg-desktop.png");
+        }
+
+        &-blocks {
+            margin-top: 21px;
+        }
+
+        &__link {
+            padding: 67px 0;
+        }
+
+        &_in-help-page {
+            margin-top: 25px;
+        }
+
+        &_in-contact-page {
+            margin-top: 25px;
+
+            .help-banner {
+                padding: 69px 0 50px;
+            }
+        }
+    }
+}

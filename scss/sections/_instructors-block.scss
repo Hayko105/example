@@ -1,0 +1,148 @@
+.instructors-block {
+    text-align: center;
+
+    &_in-learning-page {
+        margin-top: 48px;
+    }
+
+    &_in-courses-university {
+        margin-top: 55px;
+    }
+
+    &__title {
+        max-width: 240px;
+        margin: auto;
+        text-align: center;
+        line-height: normal;
+        font-size: $xxxl;
+    }
+
+    &-body {
+        @include flex-display();
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        margin-top: 23px;
+
+        .instructor {
+            width: 126px;
+            margin-bottom: 21px;
+
+            &__img {
+                position: relative;
+                @include wh(127px, 127px);
+                margin: auto;
+                background-color: #f9f9ff;
+                @include radius(100px);
+
+                img {
+                    @include absolute-center();
+                    @include wh(107px, 107px);
+                    @include radius(100px);
+                    @include translate(0, -50%);
+                    top: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            &__name {
+                text-transform: none;
+                font-size: $l;
+                margin: 9px 0 5px;
+                text-align: center;
+                color: $col-blue2;
+                line-height: 1.17;
+            }
+
+            &__position {
+                p {
+                    margin-bottom: 0;
+                    text-align: center;
+                    line-height: 1.31;
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 13px;
+        min-width: 214px;
+    }
+}
+
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .instructors-block {
+        padding: 0 40px;
+
+        &_in-learning-page {
+            margin-top: 62px;
+        }
+
+        &__title {
+            max-width: 573px;
+            font-size: $xxxxl;
+        }
+
+        &-body {
+            margin-top: 26px;
+
+            .instructor {
+                margin-bottom: 0;
+            }
+        }
+
+        .btn {
+            margin-top: 54px;
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .instructors-block {
+        padding: 0;
+
+        &_in-learning-page {
+            margin-top: 86px;
+        }
+
+        &_in-courses-university {
+            margin-top: 86px;
+        }
+
+        &__title {
+            max-width: 703px;
+            text-align: left;
+            margin-left: 0;
+            font-size: $xxxxxl;
+        }
+
+        &-body {
+            margin-top: 31px;
+
+            .instructor {
+                width: 231px;
+                text-align: center;
+
+                &__img {
+                    @include wh(176px, 176px);
+
+                    img {
+                        @include wh(150px, 150px);
+                    }
+                }
+
+                &__name {
+                    margin: 7px 0 9px;
+                }
+            }
+        }
+
+        .btn {
+            margin-top: 55px;
+        }
+    }
+}

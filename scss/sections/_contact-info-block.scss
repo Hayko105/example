@@ -1,0 +1,151 @@
+.contact-info-block {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+
+    padding-bottom: 45px;
+    margin-bottom: 31px;
+    border-bottom: 1px solid $col-light-blue2;
+
+    &__container {
+        margin-top: 51px;
+    }
+
+    &__img {
+        @include wh(52px, 53px);
+        margin-right: 20px;
+
+        img {
+            @include wh(100%, 100%);
+        }
+    }
+
+    &__title {
+        max-width: 220px;
+        
+        h2{
+            font-size: $xxxl;
+        }
+        
+        @media (max-width: 359px) {
+            max-width: 180px;
+        }
+    }
+
+    &-desc {
+        width: 100%;
+        margin-top: 26px;
+
+        p {
+            line-height: 1.5;
+
+            & > a {
+                color: $col-black;
+                
+                &:not(.email-link) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .email-link {
+                font-weight: bold;
+                color: $col-black;
+                text-decoration: underline;
+                display: block;
+                
+                @media (max-width: 359px) {
+                    font-size: $small;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .contact-info-block {
+        @include align-items(flex-start);
+
+        padding-bottom: 35px;
+        margin-bottom: 53px;
+
+        &__container {
+            margin-top: 53px;
+        }
+
+        &__img {
+            @include wh(113px, 113px);
+            margin-right: 29px;
+        }
+
+        &__title {
+            max-width: inherit;            
+        }
+
+        &-desc {
+            width: auto;
+            margin-top: 10px;
+
+            p {
+                display: inline-block;
+                vertical-align: top;
+                max-width: 250px;
+                margin: 0 38px 0 0;
+                
+                & + p{
+                    margin: 0;
+                }
+
+                & > a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .contact-info-block {
+        padding-bottom: 62px;
+
+        &__img {
+            margin-right: 60px;
+        }
+
+        &-desc {
+            p {
+                display: inline-block;
+                vertical-align: top;
+                max-width: 250px;
+                margin: 0 143px 0 0;
+
+                & > a {
+                    display: block;
+                }
+
+                &:last-child {
+                    max-width: 300px;
+                    margin-right: 0;
+
+                    & > a {
+                        display: inline;
+                    }
+
+                    .email-link {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

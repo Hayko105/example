@@ -1,0 +1,187 @@
+.list-block {
+    padding: 48px 19px 80px;
+
+    &_in-partners-page {
+        margin-top: 40px;
+    }
+
+    &_background {
+        background: url("#{$path-img}/bg-imgs/list-block/yellow-bg-mobile.png")
+            left top no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        h2 {
+            color: $col-orange;
+            font-size: $xxxl;
+        }
+    }
+
+    &__subtitle {
+        p {
+            font-size: $l;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+    }
+
+    &-list {
+        margin-top: 33px;
+
+        &__item {
+            margin-bottom: 25px;
+
+            &-num {
+                position: relative;
+                @include wh(50px, 50px);
+                margin-right: auto;
+                background: url("#{$path-img}/bg-imgs/list-block/list-item-bg.png")
+                    bottom center no-repeat;
+                background-size: cover;
+
+                span {
+                    @include absolute-center();
+                    line-height: 47px;
+                    left: -4px;
+                    text-align: center;
+                    color: $col-white;
+                    font-size: $xxl;
+                    font-family: $elgocFont;
+                    z-index: 99;
+                }
+            }
+
+            &-text {
+                margin-top: 5px;
+
+                p {
+                    line-height: 1.5;
+                    font-weight: bold;
+                    font-size: $l;
+                    color: $col-blue;
+                    margin-bottom: 0;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .list-block {
+        padding: 81px 46px 98px 8px;
+
+        &_in-partners-page {
+            margin-top: 80px;
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/list-block/yellow-bg-tablet.png")
+                left top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__title {
+            h2 {
+                font-size: $xxxxl;
+            }
+        }
+
+        &__subtitle {
+            p {
+                font-size: $xxl;
+            }
+        }
+
+        &-list {
+            padding-left: 5px;
+            margin-top: 33px;
+
+            &__item {
+                @include flex-display();
+                @include flex-wrap(wrap);
+                margin-bottom: 29px;
+
+                &-num {
+                    @include wh(53px, 53px);
+                    margin-right: 20px;
+
+                    span {
+                        line-height: 50px;
+                        left: -4px;
+                        font-size: $xxxxl;
+                    }
+                }
+
+                &-text {
+                    max-width: 594px;
+                    margin-top: 0;
+
+                    p {
+                        font-size: $xxl;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .list-block {
+        padding: 71px 0 150px;
+
+        &_in-partners-page {
+            margin-top: 115px;
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/list-block/yellow-bg-desktop.png")
+                left top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__title {
+            margin-bottom: 15px;
+
+            h2 {
+                font-size: $xxxxxl;
+            }
+        }
+
+        &__subtitle {
+            max-width: 914px;
+        }
+
+        &-list {
+            padding-left: 7px;
+            margin-top: 45px;
+
+            &__item {
+                margin-bottom: 34px;
+
+                &-num {
+                    @include wh(55px, 55px);
+                    margin-right: 35px;
+
+                    span {
+                        line-height: 55px;
+                    }
+                }
+
+                &-text {
+                    max-width: 744px;
+                }
+            }
+        }
+    }
+}

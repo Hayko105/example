@@ -1,0 +1,171 @@
+.gov-block {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    text-align: left;
+
+    &_about-us {
+        margin-top: 85px;
+    }
+
+    &-quote {
+        &__title {
+            margin-bottom: 2px;
+
+            h2 {
+                font-size: $xxxl;
+            }
+        }
+
+        &__text,
+        &__author {
+            margin-left: 13px;
+            padding-left: 20px;
+            border-left: 4px solid #ffe3a9;
+        }
+        
+        &__author {
+            text-align: right;
+        }
+
+        &__text {
+            padding-top: 12px;
+
+            p {
+                font-family: $muliFont;
+                color: $col-blue;
+                line-height: 1.5;
+                font-weight: bold;
+                font-size: $l;
+                margin: 0;
+            }
+        }
+
+        &__author {
+            span {
+                @include h3();
+                line-height: 3;
+            }
+        }
+    }
+
+    &-desc {
+        padding: 20px 18px 20px 31px;
+        background: url("#{$path-img}/bg-imgs/gov-block/gov-bg-desktop.png") top
+            center no-repeat;
+        background-size: cover;
+
+        p {
+            font-family: $muliFont;
+            color: $col-blue;
+            line-height: 1.5;
+            font-weight: bold;
+            font-size: $l;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .gov-block {
+        &_about-us {
+            margin-top: 127px;
+            margin-right: -14px;
+        }
+
+        &-quote {
+            @include align-self(flex-start);
+            padding-top: 28px;
+            width: calc(100% - 415px);
+
+            &__title {
+                margin-bottom: 20px;
+                padding-bottom: 16px;
+                border-bottom: 4px solid #ffe3a9;
+
+                h2 {
+                    max-width: 286px;
+                    font-size: $xxxxl;
+                }
+            }
+
+            &__text,
+            &__author {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+            }
+            
+            &__author { 
+                max-width: 286px;
+            }
+
+            &__text {
+                padding-top: 0;
+
+                p {
+                    max-width: 286px;
+                    font-size: $xxl;
+                }
+            }
+
+            &__author {
+                padding-top: 6px;
+            }
+        }
+
+        &-desc {
+            width: 415px;
+            padding: 28px 34px 32px 37px;
+
+            p {
+                font-size: $xxl;
+            }
+        }
+    }
+}
+
+// // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .gov-block {
+        &_about-us {
+            margin-top: 105px;
+            margin-right: 0;
+        }
+
+        &-quote {
+            padding-top: 36px;
+            width: calc(100% - 485px);
+
+            &__title {
+                margin-bottom: 25px;
+                padding-bottom: 17px;
+                border-bottom: 4px solid #ffe3a9;
+
+                h2 {
+                    max-width: 428px;
+                    font-size: $xxxxxl;
+                }
+            }
+
+            &__text {
+                p {
+                    max-width: 428px;
+                }
+            }
+
+            &__author {
+                padding-top: 8px;
+                max-width: 428px;
+            }
+        }
+
+        &-desc {
+            width: 485px;
+            padding: 36px 37px;
+        }
+    }
+}

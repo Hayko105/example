@@ -1,0 +1,253 @@
+.description-block {
+    position: relative;
+    padding: 40px 0 21px;
+    max-height: 585px;
+    overflow: hidden;
+
+    &_in-courses-university {
+        margin-top: 86px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        @include wh(100%, 227px);
+        @include gradient(rgba(255, 250, 245, 0) -88%, #fffaf5 76%);
+        z-index: 9;
+    }
+
+    &_background {
+        background: url("#{$path-img}/bg-imgs/description-block/yellow-bg-mobile.png")
+            center top no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &_in-learning-page {
+        margin-top: 8px;
+    }
+
+    &_expanded {
+        max-height: none;
+
+        &:after {
+            content: none;
+        }
+
+        .description-block__button {
+            display: none;
+        }
+
+        .no-tablet {
+            min-width: 212px;
+            margin: auto;
+        }
+
+        .btn {
+            width: 100%;
+
+            &:before {
+                background-color: #fffaf5;
+            }
+        }
+    }
+
+    &__title {
+        color: $col-blue;
+        margin-bottom: 34px;
+    }
+
+    &-body {
+        @include flex-display();
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+
+        .description-block-point {
+            margin-bottom: 35px;
+
+            &__title {
+                margin-bottom: 14px;
+
+                h2 {
+                    font-size: $l;
+                    color: #c6911f;
+                }
+            }
+
+            &__desc {
+                padding-left: 19px;
+                position: relative;
+
+                p {
+                    margin-bottom: 0;
+                    max-width: 254px;
+                    font-size: $l;
+                    color: $col-dark-gray;
+                    line-height: 1.5;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                    @include wh(1px, calc(100% - 14px));
+                    background-color: #c6911f;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__button {
+        @include absolute-center();
+        bottom: 21px;
+        width: 212px;
+        margin: auto;
+        z-index: 99;
+
+        .btn {
+            min-width: 212px;
+
+            &:before {
+                background-color: #fffaf5;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .description-block {
+        max-height: none;
+        padding: 55px 20px 75px;
+
+        &:after {
+            content: none;
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/description-block/yellow-bg-tablet.png")
+                center top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__title {
+            max-width: 446px;
+            line-height: 1;
+            margin-bottom: 48px;
+        }
+
+        &-body {
+            @include flex-display();
+            @include flex-wrap(wrap);
+            @include flex-direction(row);
+
+            .description-block-point {
+                margin-bottom: 0;
+
+                &:nth-child(odd) {
+                    margin-right: 45px;
+                }
+
+                &:nth-child(n + 3) {
+                    margin-top: 53px;
+                }
+
+                &__title {
+                    margin-bottom: 16px;
+
+                    h2 {
+                        font-size: 27px;
+                    }
+                }
+
+                &__desc {
+                    padding-left: 28px;
+
+                    p {
+                        max-width: 254px;
+                    }
+
+                    &:before {
+                        top: 0;
+                        @include wh(1px, 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .description-block {
+        padding: 75px 0 79px;
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/description-block/yellow-bg-desktop.png")
+                center top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &_in-learning-page {
+            margin-top: 15px;
+        }
+
+        &_in-courses-university {
+            margin-top: 98px;
+        }
+
+        &__title {
+            max-width: 768px;
+            line-height: normal;
+            margin-bottom: 65px;
+        }
+
+        &-body {
+            .description-block-point {
+                margin-bottom: 0;
+                margin-right: 55px;
+
+                &:nth-child(odd) {
+                    margin-right: 55px;
+                }
+
+                &:nth-child(n + 3) {
+                    margin-top: 0;
+                }
+
+
+                &:nth-child(n + 4) {
+                    margin-top: 44px;
+                }
+
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+
+                &__title {
+                    margin-bottom: 17px;
+                }
+
+                &__desc {
+                    padding-left: 23px;
+
+                    p {
+                        max-width: 253px;
+                    }
+
+                    &:before {
+                        top: 8px;
+                        @include wh(1px, calc(100% - 16px));
+                    }
+                }
+            }
+        }
+    }
+}

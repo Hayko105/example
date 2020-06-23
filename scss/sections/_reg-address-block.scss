@@ -1,0 +1,61 @@
+.reg-address-block {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include flex-direction(row);
+
+    &_in-contact-page {
+        margin-top: 25px;
+    }
+
+    &__image {
+
+        @include wh(40px, 39px);
+        margin-right: 17px;
+
+        img {
+            @include wh(100%, 100%);
+        }
+    }
+
+    &__title {
+        max-width: 199px;
+
+        h2 {
+            line-height: normal;
+        }
+    }
+
+    &__address {
+        margin-top: 13px;
+        max-width: 308px;
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .reg-address-block {
+        &_in-contact-page {
+            margin-top: 44px;
+        }
+
+        &__title {
+            max-width: 150px;
+
+            h2 {
+                font-size: $xxl;
+            }
+        }
+
+        &__address {
+            margin-top: 0;
+        }
+    }
+}
+

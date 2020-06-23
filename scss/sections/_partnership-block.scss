@@ -1,0 +1,84 @@
+.partnership {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include flex-direction(column);
+
+    &_in-courses-for-university {
+        margin: 32px 0 35px;
+    }
+
+    &__title {
+        line-height: 1;
+        margin-bottom: 14px;
+    }
+
+    &__cont {
+        img {
+            @include wh(190px, 54px);
+        }
+    }
+
+    &__link {
+        min-width: 142px;
+        margin-top: 2px;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .partnership {
+        @include flex-direction(row);
+
+        &_in-courses-for-university {
+            margin: 17px 0 16px;
+        }
+
+        &__title {
+            font-size: $xxl;
+            width: 220px;
+            margin: 0;
+        }
+
+        &__link {
+            margin: 0;
+        }
+
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .partnership {
+        @include flex-direction(row);
+
+        &_in-courses-for-university {
+            margin: 33px 0 25px;
+        }
+
+        &__title {
+            font-size: $xxxxl;
+            width: 310px;
+            margin-right: 26px;
+        }
+
+        &__cont {
+            img {
+                @include wh(208px, 58px);
+            }
+        }
+
+        &__link {
+            margin: 0;
+        }
+
+    }
+}
+

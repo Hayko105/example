@@ -1,0 +1,195 @@
+.web-talk-block {
+    &_in-web-talk-page {
+        margin-top: 73px;
+    }
+
+    &__title {
+        padding-bottom: 5px;
+        border-bottom: 1px solid $col-light-blue2;
+
+        h2 {
+            line-height: 1;
+        }
+    }
+
+    &-section {
+        @include flex-display();
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        padding-bottom: 47px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid $col-light-blue2;
+
+        &__container {
+            margin-top: 25px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-talk {
+        &__date {
+            color: $col-blue;
+            font-size: $l;
+            font-weight: bold;
+        }
+
+        &__time {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.06;
+            color: $col-blue;
+            margin-top: 13px;
+        }
+
+        &__desc {
+            margin-top: 30px;
+
+            P {
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+        }
+
+        &__links {
+            @include flex-display();
+            @include flex-wrap(wrap);
+            @include justify-content(space-between);
+            margin-top: 23px;
+
+            a {
+                @media (max-width: 359px) {
+                    min-width: 114px;
+                }
+                @media (min-width: 360px) {
+                    min-width: 144px;
+                }
+
+                &:last-child {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-align: center;
+        margin: 35px auto 0;
+
+        @media (min-width: 360px) {
+            a {
+                min-width: 304px;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .web-talk-block {
+        &_in-web-talk-page {
+            margin-top: 87px;
+        }
+
+        &__title {
+            padding-bottom: 10px;
+
+            h2 {
+                font-size: $xxxxl;
+            }
+        }
+
+        &-section {
+            @include flex-direction(row);
+            @include align-items(flex-start);
+            @include justify-content(space-between);
+            padding-bottom: 35px;
+            margin-bottom: 30px;
+
+            &__container {
+                margin-top: 29px;
+            }
+        }
+
+        &-talk {
+            &__date {
+                width: 150px;
+                margin-right: 20px;
+            }
+
+            &__time {
+                width: 110px;
+                margin-top: 10px;
+            }
+
+            &__desc {
+                width: 304px;
+                margin-top: 0;
+            }
+
+            &__links {
+                @include justify-content(flex-start);
+                @include flex-direction(column);
+                margin: 0 0 0 38px;
+
+                a {
+                    min-width: 171px;
+
+                    &:last-child {
+                        margin: 12px 0 0;
+                    }
+                }
+            }
+        }
+
+        &__link {
+            margin: 49px auto 0;
+
+            a {
+                min-width: 316px;
+            }
+        }
+    }
+}
+
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .web-talk-block {
+        &_in-web-talk-page {
+            margin-top: 95px;
+        }
+
+        &-section {
+            padding-bottom: 40px;
+            margin-bottom: 27px;
+
+            &__container {
+                margin-top: 26px;
+            }
+        }
+
+        &-talk {
+            &__date {
+                width: 225px;
+                margin-right: 20px;
+            }
+
+            &__time {
+                width: 225px;
+            }
+
+            &__desc {
+                width: 342px;
+            }
+        }
+
+        &__link {
+            margin: 52px auto 0;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.wi-comment {
+    @include flex-display();
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+
+    @include tablet() {
+        @include justify-content(space-between);
+        padding-left: 30px;
+    }
+
+    @include laptop() {
+        padding-left: 30px;
+        @include flex-wrap();
+        @include align-items(center);
+    }
+
+    @include desktop() {
+        padding-left: 0;
+    }
+
+    &__person {
+        &__image-wrapper {
+            width: 244px;
+            height: 244px;
+            padding: 21px;
+            background: url(#{$path-img}sections/comment/comment-img-bg.png) top left/ contain no-repeat;
+
+            &._with-alum {
+                position: relative;
+                margin-top: 40px;
+
+                &:after {
+                    content: '';
+                    background: url(#{$path-img}sections/comment/comment-alum.png) center/ contain no-repeat;
+                    position: absolute;
+                    width: 194px;
+                    height: 125px;
+                    top: -40px;
+                    left: -30px;
+                }
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include radius(50%);
+        }
+    }
+
+    &__text-wrapper {
+        @include laptop() {
+            padding-left: 20px;
+        }
+    }
+    &__text {
+        background: #e9e9fe;
+        padding: 33px 25px;
+        margin-top: 30px;
+        position: relative;
+        @include radius(6px);
+
+        &:after {
+            content: '';
+            position: absolute;
+            border: 15px solid transparent;
+            border-bottom: 15px solid #e9e9fe;
+            border-left: 15px solid #e9e9fe;
+            top: -30px;
+            right: 50px;
+
+            @include tablet() {
+                border: 15px solid transparent;
+                border-right: 15px solid #e9e9fe;
+                border-bottom: 15px solid #e9e9fe;
+                top: 60px;
+                right: inherit;
+                left: -30px;
+                max-width: 30px;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url(#{$path-img}sections/comment/comment-quotes.png) center/ contain no-repeat;
+            width: 28px;
+            height: 32px;
+            top: -15px;
+            left: 30px;
+
+            @include laptop() {
+                left: 60px;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: $normal;
+            line-height: 1.5;
+            color: $col-blue;
+            @include bold();
+
+            @include tablet() {
+                font-size: $l;
+            }
+        }
+
+        @include tablet() {
+            width: 415px;
+        }
+
+        @include laptop() {
+            width: 700px;
+            padding: 50px 60px 35px;
+        }
+
+        @include desktop() {
+            width: 778px;
+            padding: 50px 60px 35px;
+        }
+    }
+
+    &__btn {
+        margin-top: 25px;
+        text-align: center;
+
+        .btn {
+            min-width: 158px;
+
+            &:before {
+                background: #e9e9fe;
+            }
+        }
+
+        @include tablet() {
+            text-align: left;
+        }
+
+        @include desktop() {
+            text-align: right;
+        }
+    }
+
+    &__sign {
+        &__person {
+            line-height: 1.79;
+            font-size: 24px;
+            color: #1f1f6f;
+            @include bold();
+            margin-top: 15px;
+        }
+
+        &__position {
+            font-size: 14px;
+            line-height: 1.79;
+            color: #7b7b7b;
+            @include bold();
+        }
+
+        @include tablet() {
+            width: fit-content;
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.wi-teachers {
+    &__title {
+        text-align: center;
+    }
+
+    &__list {
+        margin-top: 20px;
+        @include justify-content(flex-start);
+    }
+
+    &__btn {
+        margin-top: 40px;
+        text-align: center;
+
+        .btn {
+            min-width: 214px;
+        }
+    }
+
+    &__item {
+        width: 50%;
+        text-align: center;
+
+        @media (min-width: 660px) {
+            width: 25%;
+        }
+
+        &__img-wrapper {
+            width: 126px;
+            height: 126px;
+            background: #f9f9ff;
+            padding: 9px;
+            @include radius(50%);
+            margin: 0 auto;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include radius(50%);
+        }
+
+        &__info {
+            margin: auto;
+            max-width: 130px;
+        }
+
+        &__name {
+            margin-top: 9px;
+            font-size: $l;
+            line-height: normal;
+            color: $col-blue2;
+            @include bold();
+        }
+
+        &__position {
+            font-size: $normal;
+            line-height: 1.31;
+            color: $col-black;
+            @include normal();
+        }
+
+        &__desc {
+            margin-top: 15px;
+            font-size: $normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $col-black;
+            @include normal();
+        }
+
+    }
+}
+
+.dep-page__teachers {
+    .wi-teachers {
+        &__item {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@include laptop() {
+    .wi-teachers {
+
+        &__item {
+
+            &__img-wrapper {
+                width: 176px;
+                height: 176px;
+                padding: 13px;
+                margin-right: 40px;
+            }
+
+            &__info {
+                @include align-self(center);
+                width: 176px;
+                max-width: 190px;
+            }
+
+            &__name {
+                font-size: $xxl;
+                margin-bottom: 9px;
+            }
+
+            &__position {
+                font-size: $l;
+            }
+
+            margin-bottom: 25px;
+        }
+    }
+
+    .course-page__teachers {
+        .wi-teachers {
+            &__title {
+                text-align: left;
+            }
+
+            &__list {
+                display: block;
+            }
+
+            &__item {
+                &__info {
+                    // width: inherit;
+                    width: 680px;
+                    max-width: 680px;
+                    @include align-self(center);
+                }
+
+                &__name {
+                    margin-bottom: 0;
+                }
+
+                max-width: 100%;
+                text-align: left;
+                margin-bottom: 25px;
+                @include flex-display();
+            }
+        }
+    }
+}

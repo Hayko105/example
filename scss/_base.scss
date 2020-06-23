@@ -1,0 +1,175 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.playButton:focus {
+    outline: none !important;
+}
+
+.soundcloud-iframe .playButton:focus {
+    outline: none !important;
+}
+
+html,
+body {
+    height: 100%;
+    color: $col-black;
+    font-size: $normal;
+    line-height: 1.2;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: $muliFont;
+
+    &.no-overflow {
+        overflow: hidden;
+    }
+}
+
+input {
+    font-family: $muliFont;
+
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+input[type="submit"],
+input[type="button"] {
+    -webkit-appearance: none;
+}
+
+._hide {
+    display: none;
+}
+
+/* content */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.container-margin {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.container-big {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.no-mobile {
+    display: none;
+}
+
+.col-50 {
+    width: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+@include tablet {
+    .container {
+        width: 728px;
+        padding: 0;
+    }
+
+    .container-margin {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .container-big {
+        padding: 0 20px;
+    }
+
+    .no-mobile {
+        display: block;
+    }
+
+    .no-tablet {
+        display: none;
+    }
+
+    .col-50 {
+        width: 50%;
+    }
+}
+
+@include laptop {
+    html,
+    body {
+        &.no-overflow{
+            overflow: inherit;
+        }
+    }
+
+    .container {
+        width: 1000px;
+    }
+
+    .container-big {
+        width: 1030px;
+        padding: 0;
+    }
+
+    .no-mobile {
+        display: block;
+    }
+
+    .no-tablet {
+        display: block;
+    }
+
+    .no-desktop {
+        display: none;
+    }
+
+    .container-wrap {
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+    }
+}
+
+@media (min-width: 1030px) and (max-width: 1439px) {
+    .container-big {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@include desktop {
+    .container-big {
+        width: 1200px;
+        padding: 0;
+    }
+
+    .container-margin {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+

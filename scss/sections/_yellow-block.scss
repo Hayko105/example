@@ -1,0 +1,116 @@
+.yellow-block {
+    width: 100%;
+    background: url('#{$path-img}bg-imgs/yellow-bg-mobile.png') left top no-repeat;
+    background-size: 100% 100%;
+    padding: 74px 0 82px;
+
+    &.yellow-block_in-courses {
+        background: url('#{$path-img}bg-imgs/yellow-block-mob-in-courses.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__item {
+
+        & + .yellow-block__item {
+            margin-top: 50px;
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 16px 0;
+        }
+
+        .title-h2 {
+            br {
+                display: none;
+            }
+        }
+
+        .btn {
+            min-width: 152px;
+
+            &::before {
+                background-color: #ffdc91;
+            }
+        }
+
+    }
+
+}
+
+
+/*** Tablet ***/
+@include tablet {
+
+    .yellow-block {
+        background: url('#{$path-img}bg-imgs/yellow-bg-tablet.png') left top no-repeat;
+        background-size: 100% 100%;
+        padding: 90px 0 92px;
+
+        &.yellow-block_in-courses {
+            background: url('#{$path-img}bg-imgs/yellow-bg-tablet.png') left top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__item {
+            width: 27%;
+
+            & + .yellow-block__item {
+                margin-top: 0;
+            }
+
+            .title-h2 {
+                line-height: 1;
+                height: 90px;
+                overflow: hidden;
+
+                br {
+                    display: block;
+                }
+            }
+
+            p {
+                margin: 8px 0 25px;
+                height: 120px;
+                overflow: hidden;
+            }
+
+        }
+    }
+
+}
+
+
+/*** Laptop ***/
+@include laptop {
+
+    .yellow-block {
+        background: url('#{$path-img}bg-imgs/yellow-bg-desktop.png') left top no-repeat;
+        padding: 110px 0 105px;
+        background-size: 100% 100%;
+
+        &.yellow-block_in-courses {
+            background: url('#{$path-img}bg-imgs/yellow-bg-desktop.png') left top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__item {
+            width: 26%;
+
+            .title-h2 {
+                height: 120px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                height: 96px;
+                max-width: 250px;
+            }
+
+        }
+    }
+
+}

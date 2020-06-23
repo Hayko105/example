@@ -1,0 +1,162 @@
+.student-queries {
+    padding-bottom: 52px;
+    border-bottom: 1px solid $col-light-blue2;
+
+    &_in-contact-page {
+        margin-top: 27px;
+    }
+
+    &-header {
+        &__img {
+            @include wh(95px, 69px);
+
+            img {
+                @include wh(100%, 100%);
+            }
+        }
+
+        &__title {
+            margin-top: 19px;
+        }
+
+        &__subtitle {
+            margin-top: 13px;
+            max-width: 215px;
+
+            p {
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-display();
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+
+        margin-top: 34px;
+    }
+
+    &__query {
+        margin-top: 40px;
+
+        &-name {
+            h3 {
+                color: $col-blue3;
+                line-height: 3;
+                letter-spacing: 1.14px;
+            }
+        }
+
+        &-info {
+            a {
+                line-height: 1.5;
+                color: $col-black;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+        }
+
+        &-text {
+            p {
+                line-height: 1.5;
+                max-width: 220px;
+                margin-bottom: 0;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+        margin-top: 32px;
+
+        .btn {
+            min-width: 220px;
+        }
+    }
+}
+
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .student-queries {
+        padding-bottom: 46px;
+
+        &-header {
+            @include flex-display();
+            @include flex-wrap(wrap);
+            @include align-items(center);
+
+            &__img {
+                @include wh(155px, 113px);
+                margin-right: 13px;
+            }
+
+            &__title {
+                margin-top: 0;
+
+                h2 {
+                    font-size: $xxxl;
+                }
+            }
+
+            &__subtitle {
+                margin-top: 10px;
+                max-width: inherit;
+            }
+        }
+
+        &-body {
+            @include flex-direction(row);
+            margin-top: 18px;
+        }
+
+        &__query {
+            margin: 0 25px 40px 0;
+            width: 315px;
+
+            &-text {
+                p {
+                    max-width: 220px;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__link {
+            margin-top: 0;
+        }
+    }
+
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .student-queries {
+        &__query {
+            width: 315px;
+            margin: 0 25px 32px 0;
+        }
+
+        &__link {
+            text-align: right;
+            margin-right: 100px;
+        }
+    }
+}

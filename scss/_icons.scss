@@ -1,0 +1,296 @@
+.icon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.icon_fb {
+    background: url(#{$path-icon}icon-fb.svg) center no-repeat;
+    width: 47px;
+    height: 47px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-fb-hover.svg) center no-repeat;
+    }
+}
+
+.icon_twitt {
+    background: url(#{$path-icon}icon-twitt.svg) center no-repeat;
+    width: 47px;
+    height: 47px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-twitt-hover.svg) center no-repeat;
+    }
+}
+
+.icon_insta {
+    background: url(#{$path-icon}icon-insta.svg) center no-repeat;
+    width: 47px;
+    height: 47px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-insta-hover.svg) center no-repeat;
+    }
+}
+
+.icon_youtube {
+    background: url(#{$path-icon}icon-youtube.svg) center no-repeat;
+    width: 47px;
+    height: 47px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-youtube-hov.svg) center no-repeat;
+    }
+}
+
+.icon_call {
+    background: url(#{$path-icon}icon-call.svg) center no-repeat;
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+
+    }
+}
+
+.icon_call-2 {
+    background: url(#{$path-icon}icon-dates-dark-2.svg) center no-repeat;
+    width: 43px;
+    height: 46px;
+
+    &:hover {
+
+    }
+}
+
+.icon_email {
+    background: url(#{$path-icon}icon-email.svg) center / contain no-repeat;
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-email-hover.svg) center / contain no-repeat;
+    }
+}
+
+.icon_linkdin {
+    background: url(#{$path-icon}icon-linkdin.svg) center / contain no-repeat;
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-linkdin.svg) center / contain no-repeat;
+    }
+}
+
+.icon_like {
+    background: url(#{$path-icon}icon-like.svg) center / contain no-repeat;
+    width: 62px;
+    height: 62px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-like-hover.svg) center / contain no-repeat;
+    }
+}
+
+.icon_share {
+    background: url(#{$path-icon}icon-share.svg) center / contain no-repeat;
+    width: 62px;
+    height: 62px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-share-hover.svg) center / contain no-repeat;
+    }
+}
+
+.icon_reminder {
+    background: url(#{$path-icon}icon-reminder.svg) center / contain no-repeat;
+    width: 62px;
+    height: 62px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-reminder-hover.svg) center / contain no-repeat;
+    }
+}
+
+.icon_play {
+    background: url(#{$path-icon}icon-play.svg) center / contain no-repeat;
+    width: 15px;
+    height: 17px;
+}
+
+.icon_dates {
+    background: url(#{$path-icon}icon-dates.svg) center / contain no-repeat;
+    width: 25px;
+    height: 27px;
+}
+
+.icon_clock {
+    background: url(#{$path-icon}icon-clock.svg) center / contain no-repeat;
+    width: 22px;
+    height: 28px;
+}
+
+.icon_dates-dark {
+    background: url(#{$path-icon}icon-dates-dark.svg) center / contain no-repeat;
+    width: 32px;
+    height: 34px;
+}
+
+.icon_clock-dark {
+    background: url(#{$path-icon}icon-duration-dark.svg) center / contain no-repeat;
+    width: 34px;
+    height: 36px;
+}
+
+.icon_wi-symbol-white {
+    background: url(#{$path-icon}icon-wi-symbol-white.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_tag {
+    background: url(#{$path-icon}icon-tag.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_list-star_blue {
+    background: url(#{$path-icon}star-blue.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_list-star_brown {
+    background: url(#{$path-icon}star-brown.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_list-star_green {
+    background: url(#{$path-icon}star-green.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_list-star_pink {
+    background: url(#{$path-icon}star-pink.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_list-star_red {
+    background: url(#{$path-icon}star-red.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_list-star_yellow {
+    background: url(#{$path-icon}star-yellow.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_date {
+    background: url(#{$path-icon}icon-date.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_duration {
+    background: url(#{$path-icon}icon-duration.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+
+.icon_credit-hours {
+    background: url(#{$path-icon}icon-credit-hours.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_register-by {
+    background: url(#{$path-icon}icon-register-by.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_weekly-study {
+    background: url(#{$path-icon}icon-weekly-study.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_check-mark-orange {
+    background: url(#{$path-icon}icon-check-mark-orange.svg) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.icon_ann_arrow {
+    background: url(#{$path-icon}icon-announ-arrow.svg) center / contain no-repeat;
+    width: 26px;
+    height: 16px;
+}
+
+.icon-study-green {
+    background: url(#{$path-icon}icon-study-green.svg) center / contain no-repeat;
+    width: 40px;
+    height: 38px;
+}
+
+.icon-help-green {
+    background: url(#{$path-icon}icon-help-green.svg) center / contain no-repeat;
+    width: 34px;
+    height: 35px;
+}
+
+.icon-community-green {
+    background: url(#{$path-icon}icon-community-green.svg) center / contain no-repeat;
+    width: 40px;
+    height: 29px;
+}
+
+.icon-university-green {
+    background: url(#{$path-icon}icon-university-green.svg) center / contain no-repeat;
+    width: 35px;
+    height: 32px;
+}
+
+.icon_star {
+    background: url(#{$path-icon}icon-star.svg) center / contain no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+
+.icon_email_green {
+    background: url(#{$path-icon}icon-email-green.svg) center / contain no-repeat;
+    width: 63px;
+    height: 63px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-email-green-hov.svg) center / contain no-repeat;
+    }
+}
+
+.icon_fb_green {
+    background: url(#{$path-icon}icon-fb-green.svg) center / contain no-repeat;
+    width: 63px;
+    height: 63px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-fb-green-hov.svg) center / contain no-repeat;
+    }
+}
+
+.icon_twitt_green {
+    background: url(#{$path-icon}icon-twitt-green.svg) center / contain no-repeat;
+    width: 63px;
+    height: 63px;
+
+    &:hover {
+        background: url(#{$path-icon}icon-twitt-green-hov.svg) center / contain no-repeat;
+    }
+}

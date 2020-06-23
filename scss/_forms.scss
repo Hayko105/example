@@ -1,0 +1,362 @@
+.select-styler {
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: $muliFont;
+    font-size: $l;
+    
+    .jq-selectbox {
+        
+        &__select{
+            height: 52px;
+            padding: 8px 48px 8px 18px;
+            border: solid 1px $col-light-blue2 !important;
+            @include radius(8px);
+            @include bold();
+            background: #fff;
+            color: $col-blue;
+            font-family: $muliFont;
+            font-size: $l;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        
+        &__trigger{
+            border: 0;
+            width: 40px;
+            background: url(#{$path-icon}icon-selectbox-arrow.svg) left center no-repeat;
+            &-arrow{
+                display: none;
+            }
+        }
+        
+        &__dropdown{
+            @include radius(8px);
+            border: solid 1px #6666d2 !important;
+            box-shadow: none;
+            font-family: $muliFont;
+            font-size: $l;
+            overflow: hidden;
+            top: 56px;
+            
+            li {
+                padding: 12px 18px;                
+                color: #6666d2;
+                border-bottom: 1px solid #6666d2;
+                
+                &:last-child {
+                    border-bottom: 0;
+                }
+                
+                &.selected,
+                &:hover{
+                    background: $col-light-blue2;
+                    color: $col-blue;
+                }
+            }
+        }
+    }
+}
+
+.jq-radio {
+    width: 24px;
+    height: 24px;
+    border: solid 1px $col-light-blue2;
+    @include radius(50%);
+    box-shadow: none;
+    background: none;
+    vertical-align: middle;
+    margin-right: 14px;
+    
+    &.checked {
+        border: solid 1px #cacaf7;
+        
+        .jq-radio__div{
+            background-color: $col-blue;
+            box-shadow: none;
+            width: 14px;
+            height: 14px;
+            margin: 3.5px;
+        }
+    }
+    
+}
+
+.form-title {
+    font-size: $xxxl;
+    font-weight: bold;    
+}
+
+.form-subtitle {
+    color: #6666d2;
+    margin-bottom: 30px;
+}
+
+
+.form-row{
+    margin-bottom: 28px;
+    vertical-align: top;
+    
+    p {
+        color: #6b6b6b;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    .btn {
+        min-width: 228px;
+        max-width: 228px;        
+        display: inline-block;
+    }
+    
+    .input-btn{
+        margin: 78px auto 0;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        display: block;
+        
+        &:hover {
+            .btn {
+                background: $col-light-blue3;
+                color: #1f1f6e;
+                
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 18px;
+                    background: $col-light-blue3;
+                    @include rotate(45deg);
+                    z-index: 2;
+                    left: 5px;
+                    top: -4px;
+                }
+            }
+        }
+        
+        .btn {
+            pointer-events: none;
+        }
+    }
+    
+    &__radio{
+        margin-top: 20px;
+        
+        label, .wpcf7-list-item-label{
+            font-size: $normal;
+            color: $col-dark-gray;
+            display: inline-block;
+            width: calc(100% - 45px);
+            vertical-align: middle;
+        }
+        
+        span.wpcf7-list-item {
+            margin: 0;
+            margin-top: 20px;
+            display: block;
+        }
+        
+        .wpcf7-not-valid-tip {
+            margin-top: 12px;
+        }
+    }
+    
+    &_340 {
+        width: 340px;
+    }
+    
+    .wpcf7-not-valid-tip {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+
+div.wpcf7-response-output {
+    display: none !important;
+}
+
+.form-input {
+    width: 100%;
+    height: 49px;
+    padding: 8px 15px;
+    border: solid 1px $col-light-blue2;
+    @include radius(8px);
+}
+
+.form-textarea {
+    width: 100%;
+    height: 49px;
+    padding: 8px 15px;
+    border: solid 1px $col-light-blue2;
+    @include radius(8px);
+    height: 240px;
+    resize: none;
+}
+
+.form-label {
+    color: $col-dark-gray;
+    font-weight: bold;
+    font-size: $l;
+    margin-bottom: 3px;
+    display: block;
+    line-height: 1.4;
+    
+    span {
+        color: #6666d2;
+        font-size: $normal;
+        font-weight: normal;
+    }
+}
+
+.application-form {
+    margin-bottom: 50px;
+    
+    .form-row{
+        
+        .input-btn{
+            
+            &:hover {
+                .btn {
+                    border-color: #33805f;
+
+                    &::before{
+                        border-color: #33805f;
+                    }
+                    
+                    &::after{
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.contact-form-block {
+    border-bottom: solid 1px $col-light-blue2;
+    padding-bottom: 20px;
+    
+    .form-title{
+        max-width: 240px;
+        margin-bottom: 10px;
+    }
+    
+    .title-h4 {
+        max-width: 240px;
+    }
+    
+    .form-subtitle {
+        padding-top: 25px;
+        margin-top: 25px;
+        border-top: solid 1px $col-light-blue2;
+    }
+    
+    .form-row{ 
+        .input-btn{
+            margin: 5px 0 0;
+        }
+        
+        .btn {            
+            background: transparent;
+            
+            &:hover, 
+            &.btn_active {
+                background: $col-light-blue3;
+            }
+        }
+    }
+     
+}
+
+
+/*** Tablet ***/
+@include tablet () {
+    
+    .form-title { 
+        font-size: $xxxxl;
+    }
+    
+    .application-form {
+        margin-bottom: 80px;
+    }
+    
+    .form-row{    
+        
+        .input-btn{
+            margin: 48px 0 0;
+        }
+    
+        &_350 {
+            width: 350px;
+            display: inline-block;
+            
+            & + .form-row_350{
+                margin-left: 20px;
+            }
+        }
+        
+        &_426 {
+            width: 426px;
+        }
+        
+        &_463 {
+            width: 463px;
+        }
+        
+        &_316 {
+            width: 340px;
+            
+            .form-input{
+                width: 316px;
+            }
+        }
+        
+    }
+    
+    .contact-form-block {
+        max-width: 600px;
+        margin-top: 65px;
+        padding-bottom: 40px;
+        
+        .form-title{
+            max-width: 550px;
+            margin-bottom: 15px;
+            font-size: $xxxxxl;
+            line-height: 1;
+        }
+
+        .title-h4 {
+            max-width: 550px;
+        }
+        
+        .form-row{ 
+            .input-btn{
+                margin: 5px 0 0;
+            }
+        }
+        
+    }
+            
+    .form-textarea {
+        height: 226px;
+    }
+    
+}
+
+
+/*** Laptop ***/
+@include laptop () {
+    
+    .jq-radio {
+    
+        &.checked {
+
+            .jq-radio__div{
+                margin: 4px;
+            }
+        }
+    
+    }
+    
+}

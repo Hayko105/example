@@ -1,0 +1,115 @@
+/***** Pager ******/
+.pager{
+    margin: 0 0 20px;
+    @include flex-display();
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-wrap(nowrap);
+    text-align: center;
+
+    .hidden-pager {
+        display: none;
+    }
+
+    &__item{
+        color: $col-blue;
+        font-size: $normal;
+        @include bold();
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 10px;
+        border: 1px solid $col-light-blue3;
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+        @include radius(50%);
+        text-align: center;
+
+        @media (max-width: 359px) {
+            margin: 0 3px;
+        }
+
+        &_select,
+        &.active {
+            background: $col-light-blue3;
+        }
+
+        &.disabled {
+            //opacity: 0;
+            pointer-events: none;
+            display: none;
+        }
+
+        &_arrow{
+            color: $col-blue;
+            font-size: $small;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 14px;
+                top: 50%;
+                left: 50%;
+                margin-top: -6px;
+                margin-left: -4px;
+                background: url(#{$path-icon}icon-left-arrow-purple.svg) center no-repeat;
+            }
+
+        }
+
+        &_prev{
+            margin-left: 0;
+
+            &::before{
+                @include rotate(180deg);
+                margin-left: -5px;
+            }
+        }
+        &_next{
+            margin-right: 0;
+        }
+    }
+}
+
+.pager-counter{
+    color: $col-blue;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/*** Laptop ***/
+@include laptop {
+
+    .pager{
+
+        &__item{
+            
+            &_select,
+            &.active,
+            &:hover {
+                background: $col-light-blue3;
+            }
+
+            &_arrow{
+
+                &::before{
+                    margin-top: -7px;
+                    margin-left: -3px;
+                }
+            }
+
+            &_prev{
+
+                &::before{
+                    margin-left: -5px;
+                }
+            }
+        }
+    }
+
+}

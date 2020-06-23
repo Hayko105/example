@@ -1,0 +1,246 @@
+/*TYPOGRAPHY*/
+a {
+    @include transitions();
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1 a,
+h2 a,
+h3 a {
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    margin-bottom: $pad2;
+    width: auto;
+    font-size: $normal;
+    color: $col-black;
+    height: auto;
+    letter-spacing: normal;
+    font-weight: normal;
+
+    a {
+        padding: 0;
+        display: inline;
+    }
+}
+
+table,
+form,
+input,
+select,
+textarea,
+iframe,
+object {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: $normal;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mobile-text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+//========= Typography titles
+.title {
+    font-family: $elgocFont;
+}
+
+.title-big {
+    color: $col-blue;
+    font-size: 36px;
+    @include bold();
+    margin: 0;
+}
+
+.title-small {
+    color: $col-blue;
+    font-size: $small;
+    @include bold();
+    margin: 0;
+}
+
+.title-underline {
+    color: #6666d2;
+    font-size: $normal;
+    @include bold();
+    margin: 0;
+    text-decoration: underline;
+}
+
+@mixin h1() {
+    color: $col-blue;
+    font-size: $xxxl;
+    font-family: $elgocFont;
+    @include bold();
+    margin: 0;
+}
+
+@mixin h2() {
+    color: $col-blue;
+    font-size: $xxl;
+    font-family: $elgocFont;
+    @include bold();
+    margin: 0;
+}
+
+@mixin h3() {
+    color: $col-blue3;
+    font-size: $small;
+    font-family: $muliFont;
+    @include bold();
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1.14px;
+}
+
+@mixin h4() {
+    color: $col-blue;
+    font-size: $l;
+    font-family: $muliFont;
+    @include bold();
+    margin: 0;
+}
+
+@mixin h5() {
+    color: $col-dark-gray;
+    font-size: $xl;
+    font-family: $muliFont;
+    @include bold();
+    margin: 0;
+}
+
+@mixin h6() {
+    color: $col-blue2;
+    font-size: $l;
+    font-family: $muliFont;
+    @include normal();
+    margin: 0;
+}
+
+h1,
+.title-h1 {
+    @include h1();
+}
+
+h2,
+.title-h2 {
+    @include h2();
+}
+
+h3,
+.title-h3 {
+    @include h3();
+}
+
+h4,
+.title-h4 {
+    @include h4();
+}
+
+h5,
+.title-h5 {
+    @include h5();
+}
+
+h6,
+.title-h6 {
+    @include h6();
+}
+
+.text-orange {
+    color: $col-orange;
+}
+
+.text-white {
+    color: $col-white;
+}
+
+.b-b-blue {
+    border-bottom: 3px solid #6666d2;
+}
+
+.b-b-pink {
+    border-bottom: 3px solid #fac3dc;
+}
+
+.b-b-yellow {
+    border-bottom: 3px solid #ffdc91;
+}
+
+.b-b-red {
+    border-bottom: 3px solid #fa5032;
+}
+
+.b-b-green {
+    border-bottom: 3px solid #78bea0;
+}
+
+@include tablet {
+
+    .mobile-text-center {
+        text-align: left;
+    }
+
+    .title-big {
+        font-size: $xxxxxxl;
+    }
+
+    h1,
+    .title-h1 {
+        font-size: $xxxxl;
+    }
+
+    h2,
+    .title-h2 {
+        font-size: 30px;
+    }
+
+    h3,
+    .title-h3 {
+        font-size: $small;
+    }
+
+    h4,
+    .title-h4 {
+        font-size: $xxl;
+    }
+}
+
+@include laptop {
+    h1,
+    .title-h1 {
+        font-size: $xxxxxl;
+    }
+
+    h2,
+    .title-h2 {
+        font-size: $xxxxl;
+    }
+}
